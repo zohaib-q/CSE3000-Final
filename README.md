@@ -20,6 +20,7 @@ Part 1: Build a Content Moderation Model
     – https://github.com/aymeam/Datasets-for-Hate-Speech-Detection
     
   • Text Classification:
+
   
   1. Preprocess the dataset:
     
@@ -42,8 +43,10 @@ Part 1: Build a Content Moderation Model
       – Use metrics like accuracy, precision, recall, and F1-score.
       
       – Split data into training and test sets (e.g., 80/20).
+     
 
 Part 2: Ethical Analysis
+
 
   • Analyze Model Bias:
   
@@ -51,6 +54,7 @@ Part 2: Ethical Analysis
       based on gender, race, or context).
       
    – Use the dataset’s metadata if available (e.g., demographic labels).
+
     
   • Propose Improvements:
   
@@ -58,13 +62,17 @@ Part 2: Ethical Analysis
     
    – Reflect on how false positives/negatives could impact users (e.g., silencing marginalized voices or allowing harmful content).
 
+
+
 Deliverables
+
 
   • Code Submission:
   
    – A Jupyter Notebook or Python script implementing the model and evaluations.
     
    – Include well-documented code and instructions.
+   
     
   • Presentation (5-10 minutes):
   
@@ -72,12 +80,15 @@ Deliverables
       curve).
       
    – Discussion of bias, limitations, and ethical concerns.
+
     
   • Technical Report (2-3 pages):
   
    – Summarize methodology, results, and ethical reflections.
 
+
 Example Workflow
+
 
   • Preprocess Data: Clean, tokenize, and convert text to numerical features.
   
@@ -89,6 +100,7 @@ Example Workflow
     
 Ethical Reflection Prompts
 
+
    • How might your model’s false positives (flagging non-toxic comments) affect user experience?
     
    • If toxic comments from certain groups are more frequently flagged, what steps could
@@ -98,6 +110,7 @@ Ethical Reflection Prompts
     
 
 Grading Criteria
+
 
   • Presentation and Report (40%): Clarity of methodology and ethical reflections.
   
