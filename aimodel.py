@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import classification_report, confusion_matrix
+from sklearn.metrics import classification_report, confusion_matrix, accuracy_score, precision_score, recall_score, f1_score
 import seaborn as sns
 import matplotlib.pyplot as plt
 import joblib
@@ -78,8 +78,25 @@ model.fit(X_train, y_train)
 print("Making predictions...")
 y_pred = model.predict(X_test)
 
-# 9. Evaluation report
-print("\nClassification Report:")
+# 9. Calculate metrics
+print("\nModel Performance Metrics:")
+print("=" * 50)
+
+# Calculate individual metrics
+accuracy = accuracy_score(y_test, y_pred)
+precision = precision_score(y_test, y_pred)
+recall = recall_score(y_test, y_pred)
+f1 = f1_score(y_test, y_pred)
+
+# Print metrics
+print(f"Accuracy:  {accuracy:.4f}")
+print(f"Precision: {precision:.4f}")
+print(f"Recall:    {recall:.4f}")
+print(f"F1-Score:  {f1:.4f}")
+print("=" * 50)
+
+# Print detailed classification report
+print("\nDetailed Classification Report:")
 print(classification_report(y_test, y_pred))
 
 # 10. Confusion matrix
@@ -112,16 +129,3 @@ def predict_toxicity(comment: str, model, word_vectorizer, char_vectorizer) -> s
     prediction = model.predict(X)[0]
     
     return "Toxic" if prediction == 1 else "Non-Toxic"
-
-# Example usage
-example_comments = [
-    "I'm so happy to be here!",
-    "You're an idiot and I hate you!",
-    "This is a great discussion, thanks for sharing!"
-]
-
-print("\nExample predictions:")
-for comment in example_comments:
-    result = predict_toxicity(comment, model, word_vectorizer, char_vectorizer)
-    print(f"Comment: {comment}")
-    print(f"Prediction: {result}\n")
