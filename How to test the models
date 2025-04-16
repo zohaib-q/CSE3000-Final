@@ -29,7 +29,7 @@ This repository contains pre-trained models for toxicity classification in text 
 ```
 .
 ├── config.json
-├── model.safetensors
+├── model.safetensors    ## This is the important google drive folder
 ├── special_tokens_map.json
 ├── tokenizer_config.json
 ├── vocab.txt
