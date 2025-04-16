@@ -1,0 +1,43 @@
+# Toxicity Classification Models
+
+This repository contains pre-trained models for toxicity classification in text comments.
+
+## Quick Start Guide
+
+### Prerequisites
+1. Install Python 3.8 or higher
+2. Install required packages:
+   ```bash
+   pip install torch transformers scikit-learn
+   ```
+
+### Testing the Models
+1. Download all files into a single folder
+2. Run either test script:
+   ```bash
+   python test_bert_model.py
+   # or
+   python test_model.py
+   ```
+3. Enter text when prompted to get toxicity predictions
+4. Type 'exit' to quit
+
+## Required Files
+```
+.
+├── config.json
+├── model.safetensors
+├── special_tokens_map.json
+├── tokenizer_config.json
+├── vocab.txt
+├── char_vectorizer.pkl
+├── word_vectorizer.pkl
+├── logistic_model.pkl
+├── test_bert_model.py
+└── test_model.py
+```
+
+## Notes
+- The BERT model requires more computational resources
+- Both models will classify text as either "Toxic" or "Non-Toxic"
+- Make sure all model files are in the same folder as the test scripts 
