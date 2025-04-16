@@ -10,17 +10,20 @@ This repository contains pre-trained models for toxicity classification in text 
    ```bash
    pip install torch transformers scikit-learn
    ```
+## Note: pip install any other dependanceies your terminal says you're missing when trying to run
 
 ### Testing the Models
 1. Download all files into a single folder
-2. Run either test script:
+2. Download files too large for github:
+   - https://drive.google.com/file/d/12K1R2v9Zst_tuRE1jeRoGLiu3j4RDIS8/view?usp=sharing
+3. Run either test script:
    ```bash
    python test_bert_model.py
    # or
    python test_model.py
    ```
-3. Enter text when prompted to get toxicity predictions
-4. Type 'exit' to quit
+4. Enter text when prompted to get toxicity predictions
+5. Type 'exit' to quit
 
 ## Required Files
 ```
@@ -38,6 +41,6 @@ This repository contains pre-trained models for toxicity classification in text 
 ```
 
 ## Notes
-- The BERT model requires more computational resources
+- The BERT model requires more computational resources (will take 1 - 2 min to load)
 - Both models will classify text as either "Toxic" or "Non-Toxic"
 - Make sure all model files are in the same folder as the test scripts 
