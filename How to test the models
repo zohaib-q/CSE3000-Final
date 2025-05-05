@@ -39,8 +39,3 @@ This repository contains pre-trained models for toxicity classification in text 
 4. Enter text when prompted to get toxicity predictions
 5. Type 'exit' to quit
 
-
-## Notes
-- The BERT model requires more computational resources (will take 1 - 2 min to load)
-- Both models will classify text as either "Toxic" or "Non-Toxic"
-- Make sure all model files are in the same folder as the test scripts 
