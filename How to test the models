@@ -28,11 +28,12 @@ This repository contains pre-trained models for toxicity classification in text 
 ## Required Files
 ```
 .
-├── config.json
-├── model.safetensors    ## This is the important google drive folder
-├── special_tokens_map.json
-├── tokenizer_config.json
-├── vocab.txt
+├── bert_toxicity_model/
+│   ├── config.json
+│   ├── model.safetensors        ## This is the important google drive folder
+│   ├── tokenizer_config.json
+│   ├── special_tokens_map.json
+│   └── vocab.txt
 ├── char_vectorizer.pkl
 ├── word_vectorizer.pkl
 ├── logistic_model.pkl
